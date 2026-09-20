@@ -1,3 +1,4 @@
+import { CyberThreatMap } from "@/components/CyberThreatMap";
 import Link from "next/link";
 import { GLOBAL_SENTINEL_METRICS, FALLBACK_VULNERABILITIES } from "@/lib/fallback-data";
 import { AlertTriangle, ShieldCheck, ChevronRight, ExternalLink, Skull } from "lucide-react";
@@ -44,6 +45,8 @@ export default function SentinelBoardPage() {
       <div className="border-l-4 border-danger bg-red-50/40 p-4 rounded-r-md text-red-950 leading-relaxed">
         <strong>Scoring Isolation Invariant:</strong> Severity (CVSS), probability of exploitation (EPSS), and confirmed active exploitation (CISA KEV) are three separate metrics. This monitor does not combine them into a composite score.
       </div>
+
+      <CyberThreatMap />
 
       {/* What Changed Today */}
       <div className="space-y-4">
